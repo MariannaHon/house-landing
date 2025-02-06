@@ -1,13 +1,919 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Hounter</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <a href="./index.html">
+        <svg width="115" height="36">
+          <use href="/src/img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="">About us</a></li>
+          <li><a href="">Article</a></li>
+          <li><a href="">Property</a></li>
+        </ul>
+        <button type="submit">Sign Up</button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <div>
+            <h1>Find The Place To Live Your Dreams Easily Here</h1>
+            <h3>
+              Everything you need about finding your place to live will be here,
+              where it will be easier for you
+            </h3>
+            <div>
+              <input type="text" />
+              <svg width="24" height="24">
+                <use href="/src/img/sprite.svg#icon-map"></use>
+              </svg>
+              <div>
+                <button type="button">Search</button>
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-arrow2"></use>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3>Our Partnership</h3>
+              <ul>
+                <li>
+                  <img
+                    srcset="
+                      ./src/img/traveloka_logo2.png    1x,
+                      ./src/img/traveloka_logo2@2x.png 2x
+                    "
+                    src="./src/img/traveloka_logo2.png"
+                    width="82"
+                    height="64"
+                    alt="logo of traveloka"
+                  />
+                </li>
+                <li>
+                  <img
+                    srcset="
+                      ./src/img/traveloka_logo5.png    1x,
+                      ./src/img/traveloka_logo5@2x.png 2x
+                    "
+                    src="./src/img/traveloka_logo5.png"
+                    width="82"
+                    height="64"
+                    alt="logo of ticket.com"
+                  />
+                </li>
+                <li>
+                  <img
+                    srcset="
+                      ./src/img/traveloka_logo3.png    1x,
+                      ./src/img/traveloka_logo3@2x.png 2x
+                    "
+                    src="./src/img/traveloka_logo3.png"
+                    width="82"
+                    height="64"
+                    alt="logo of airbnb"
+                  />
+                </li>
+                <li>
+                  <img
+                    srcset="
+                      ./src/img/traveloka_logo4.png    1x,
+                      ./src/img/traveloka_logo4@2x.png 2x
+                    "
+                    src="./src/img/traveloka_logo4.png"
+                    width="82"
+                    height="64"
+                    alt="logo of tripadvisor"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <img
+              srcset="./src/img/hero.jpg 1x, ./src/img/hero@2x.jpg 2x"
+              src="./src/img/hero.jpg"
+              width="82"
+              height="64"
+              alt="modern white building"
+            />
+            <div>
+              <ul>
+                <li>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/ellipse4.png    1x,
+                        ./src/img/ellipse4@2x.png 2x
+                      "
+                      src="./src/img/ellipse4.png"
+                      width="120"
+                      height="120"
+                      alt="user"
+                    />
+                    <img
+                      srcset="
+                        ./src/img/ellipse5.png    1x,
+                        ./src/img/ellipse5@2x.png 2x
+                      "
+                      src="./src/img/ellipse5.png"
+                      width="120"
+                      height="120"
+                      alt="user"
+                    />
+                    <img
+                      srcset="
+                        ./src/img/orange.png    1x,
+                        ./src/img/orange@2x.png 2x
+                      "
+                      src="./src/img/orange.png"
+                      width="120"
+                      height="120"
+                      alt="user"
+                    />
+                  </div>
+                  <div>
+                    <h2>1K+ People</h2>
+                    <h3>Successfully Getting Home</h3>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    srcset="
+                      ./src/img/56houses.png    1x,
+                      ./src/img/56houses@2x.png 2x
+                    "
+                    src="./src/img/56houses.png"
+                    width="120"
+                    height="120"
+                    alt="user"
+                  />
+                  <div>
+                    <h2>56 Houses</h2>
+                    <h3>Sold Monthly</h3>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    srcset="
+                      ./src/img/ellipse6.png    1x,
+                      ./src/img/ellipse6@2x.png 2x
+                    "
+                    src="./src/img/ellipse6.png"
+                    width="120"
+                    height="120"
+                    alt="user"
+                  />
+                  <div>
+                    <h2>4K+</h2>
+                    <h3>People Looking for New Homes</h3>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="featured">
+        <div>
+          <p>Our Recommendation</p>
+          <div>
+            <h2>Featured House</h2>
+            <ul>
+              <li>
+                <h3>House</h3>
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-house"></use>
+                </svg>
+              </li>
+              <li>
+                <h3>Villa</h3>
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-building"></use>
+                </svg>
+              </li>
+              <li>
+                <h3>Apartment</h3>
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-home"></use>
+                </svg>
+              </li>
+            </ul>
+            <div>
+              <button type="button">
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </button>
+              <button type="button">
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-arrow2"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <div>
+                  <img
+                    srcset="./src/img/house.jpg 1x, ./src/img/house@2x.jpg 2x"
+                    src="./src/img/house.jpg"
+                    width="376"
+                    height="382"
+                    alt="Modern house"
+                  />
+                  <div>
+                    <svg width="16" height="16">
+                      <use href="/src/img/sprite.svg#icon-fire"></use>
+                    </svg>
+                    <p>Popular</p>
+                  </div>
+                </div>
+                <div>
+                  <h2>Roselands House</h2>
+                  <h3>$ 35.000.000</h3>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/Dianne.png    1x,
+                        ./src/img/Dianne@2x.png 2x
+                      "
+                      src="./src/img/Dianne.png"
+                      width="40"
+                      height="40"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Dianne Russell</h3>
+                      <h4>Manchester, Kentucky</h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img
+                    srcset="./src/img/house2.jpg 1x, ./src/img/house2@2x.jpg 2x"
+                    src="./src/img/house2.jpg"
+                    width="376"
+                    height="382"
+                    alt="Cozy house"
+                  />
+                  <div>
+                    <svg width="16" height="16">
+                      <use href="/src/img/sprite.svg#icon-house"></use>
+                    </svg>
+                    <p>New house</p>
+                  </div>
+                </div>
+                <div>
+                  <h2>Woodlandside</h2>
+                  <h3>$ 20.000.000</h3>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/Robert.png    1x,
+                        ./src/img/Robert@2x.png 2x
+                      "
+                      src="./src/img/Robert.png"
+                      width="40"
+                      height="40"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Robert Fox</h3>
+                      <h4>Dr. San Jose, South Dakota</h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img
+                    srcset="./src/img/house3.jpg 1x, ./src/img/house3@2x.jpg 2x"
+                    src="./src/img/house3.jpg"
+                    width="376"
+                    height="382"
+                    alt="White building"
+                  />
+                  <div>
+                    <svg width="16" height="16">
+                      <use href="/src/img/sprite.svg#icon-money"></use>
+                    </svg>
+                    <p>Best deals</p>
+                  </div>
+                </div>
+                <div>
+                  <h2>The Old Lighthouse</h2>
+                  <h3>$ 44.000.000</h3>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/Ronald.png    1x,
+                        ./src/img/Ronald@2x.png 2x
+                      "
+                      src="./src/img/Ronald.png"
+                      width="40"
+                      height="40"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Ronald Richards</h3>
+                      <h4>Santa Ana, Illinois</h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img
+                    srcset="./src/img/house4.jpg 1x, ./src/img/house4@2x.jpg 2x"
+                    src="./src/img/house4.jpg"
+                    width="376"
+                    height="382"
+                    alt="Big white house"
+                  />
+                  <div>
+                    <svg width="16" height="16">
+                      <use href="/src/img/sprite.svg#icon-fire"></use>
+                    </svg>
+                    <p>Popular</p>
+                  </div>
+                </div>
+                <div>
+                  <h2>Cosmo's House</h2>
+                  <h3>$ 22.000.000</h3>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/orange.png    1x,
+                        ./src/img/orange@2x.png 2x
+                      "
+                      src="./src/img/orange.png"
+                      width="100"
+                      height="100"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Jenny Wilson</h3>
+                      <h4>Preston Rd. Inglewood, Maine 98380</h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="tour">
+        <div>
+          <p>Ready to Sell!</p>
+          <div>
+            <h2>Let’s tour and see our house!</h2>
+            <h3>
+              Houses recommended by our partners that have been curated to
+              become the home of your dreams!
+            </h3>
+            <div>
+              <h4>House Detail</h4>
+              <el>
+                <li>
+                  <svg width="32" height="32">
+                    <use href="/src/img/sprite.svg#icon-bed"></use>
+                  </svg>
+                  <p>4 Bedrooms</p>
+                </li>
+                <li>
+                  <svg width="32" height="32">
+                    <use href="/src/img/sprite.svg#icon-car"></use>
+                  </svg>
+                  <p>1 Carport</p>
+                </li>
+                <li>
+                  <svg width="32" height="32">
+                    <use href="/src/img/sprite.svg#icon-bath"></use>
+                  </svg>
+                  <p>2 Bathrooms</p>
+                </li>
+                <li>
+                  <svg width="32" height="32">
+                    <use href="/src/img/sprite.svg#icon-stairs"></use>
+                  </svg>
+                  <p>2 Floors</p>
+                </li>
+              </el>
+            </div>
+            <div>
+              <img
+                srcset="./src/img/Dianne.png 1x, ./src/img/Dianne@2x.png 2x"
+                src="./src/img/Dianne.png"
+                width="376"
+                height="382"
+                alt="Modern house"
+              />
+              <div>
+                <h3>Dianne Russell</h3>
+                <p>Manchester, Kentucky</p>
+              </div>
+              <div>
+                <svg width="24" height="24">
+                  <use href="/src/img/sprite.svg#icon-phone"></use>
+                </svg>
+                <button type="button">Contact now</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <video width="478" height="416">
+              <source src="./src/img/video.mp4" type="video/mp4" />
+              <img
+                srcset="./src/img/img.jpg 1x, ./src/img/img@2x.jpg 2x"
+                src="./src/img/img.jpg"
+                width="478"
+                height="416"
+                alt="Your browser is not supported!"
+              />
+            </video>
+            <img src="./src/img/play.png" alt="play button" />
+            <img
+              srcset="./src/img/sofa.jpg 1x, ./src/img/sofa@2x.jpg 2x"
+              src="./src/img/sofa.jpg"
+              width="296"
+              height="168"
+              alt="Green sofa"
+            />
+            <img
+              srcset="./src/img/flowers.jpg 1x, ./src/img/flowers@2x.jpg 2x"
+              src="./src/img/flowers.jpg"
+              width="96"
+              height="80"
+              alt="Flowers on the table"
+            />
+            <img
+              srcset="./src/img/chair.jpg 1x, ./src/img/chair@2x.jpg 2x"
+              src="./src/img/chair.jpg"
+              width="96"
+              height="80"
+              alt="Yellow chair"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div>
+          <p>See Our Review</p>
+          <h2>What Our User Say About Us</h2>
+          <div>
+            <ul>
+              <li>
+                <img
+                  srcset="
+                    ./src/img/red-house.jpg    1x,
+                    ./src/img/red-house@2x.jpg 2x
+                  "
+                  src="./src/img/red-house.jpg"
+                  width="784"
+                  height="429"
+                  alt="House with red roof"
+                />
+                <div>
+                  <h3>My house sold out fast!</h3>
+                  <p>
+                    I was finally able to sell my house quickly through Hounter
+                    by immediately setting me up with people who wanted my
+                    house. I also do not get a discount from the sale of my
+                    house. Awesome!
+                  </p>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/Dianne.png    1x,
+                        ./src/img/Dianne@2x.png 2x
+                      "
+                      src="./src/img/Dianne.png"
+                      width="40"
+                      height="40"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Dianne Russell</h3>
+                      <p>Manchester, Kentucky</p>
+                    </div>
+                    <svg width="24" height="24">
+                      <use href="/src/img/sprite.svg#icon-star"></use>
+                    </svg>
+                    <p>4.3</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img
+                  srcset="./src/img/pool.jpg 1x, ./src/img/pool@2x.jpg 2x"
+                  src="./src/img/pool.jpg"
+                  width="784"
+                  height="429"
+                  alt="House with pool"
+                />
+                <div>
+                  <h3>Best! I got the house I wanted through Hounter</h3>
+                  <p>
+                    Through this website I can get a house with the type and
+                    specifications I want very easily, without a complicated
+                    process to be able to find information on the house we want.
+                  </p>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/orange.png    1x,
+                        ./src/img/orange@2x.png 2x
+                      "
+                      src="./src/img/orange.png"
+                      width="100"
+                      height="100"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Jenny Wilson</h3>
+                      <p>Manager Director</p>
+                    </div>
+                    <svg width="24" height="24">
+                      <use href="/src/img/sprite.svg#icon-star"></use>
+                    </svg>
+                    <p>4.6</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img
+                  srcset="./src/img/grey.jpg 1x, ./src/img/grey@2x.jpg 2x"
+                  src="./src/img/grey.jpg"
+                  width="784"
+                  height="429"
+                  alt="House with grey roof"
+                />
+                <div>
+                  <h3>Through the Hounter, I can get a house for my self</h3>
+                  <p>
+                    By looking for information about what kind of house we want,
+                    we managed to get the house we wanted very quickly, and
+                    directly connected with the seller to be able to ask about
+                    the details, very helpful!
+                  </p>
+                  <div>
+                    <img
+                      srcset="
+                        ./src/img/Ronald.png    1x,
+                        ./src/img/Ronald@2x.png 2x
+                      "
+                      src="./src/img/Ronald.png"
+                      width="40"
+                      height="40"
+                      alt="User"
+                    />
+                    <div>
+                      <h3>Ronald Richards</h3>
+                      <p>Head of Marketing</p>
+                    </div>
+                    <svg width="24" height="24">
+                      <use href="/src/img/sprite.svg#icon-star"></use>
+                    </svg>
+                    <p>4.6</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="dots"></div>
+          </div>
+        </div>
+      </section>
+      <section class="more">
+        <div>
+          <p>See tips and trick from our partnership</p>
+          <h2>Find out more about selling and buying homes</h2>
+          <button type="button">More articles</button>
+          <div>
+            <ul>
+              <li>
+                <img
+                  srcset="./src/img/img1.jpg 1x, ./src/img/img1@2x.jpg 2x"
+                  src="./src/img/img1.jpg"
+                  width="200"
+                  height="148"
+                  alt="Orange sofa in a room"
+                />
+                <div>
+                  <img
+                    srcset="./src/img/orange.png 1x, ./src/img/orange@2x.png 2x"
+                    src="./src/img/orange.png"
+                    width="80"
+                    height="80"
+                    alt="User"
+                  />
+                  <p>Dianne Russell</p>
+                </div>
+                <h3>The things we need to check when we want to buy a house</h3>
+                <div>
+                  <svg width="24" height="24">
+                    <use href="/src/img/sprite.svg#icon-time"></use>
+                  </svg>
+                  <p>4 min read | 25 Apr 2021</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  srcset="./src/img/img2.jpg 1x, ./src/img/img2@2x.jpg 2x"
+                  src="./src/img/img2.jpg"
+                  width="200"
+                  height="148"
+                  alt="House with big yard"
+                />
+                <div>
+                  <img
+                    srcset="
+                      ./src/img/Courtney.png    1x,
+                      ./src/img/Courtney@2x.png 2x
+                    "
+                    src="./src/img/Courtney.png"
+                    width="100"
+                    height="100"
+                    alt="User"
+                  />
+                  <p>Courtney Henry</p>
+                </div>
+                <h3>
+                  7 Ways to distinguish the quality of the house we want to buy
+                </h3>
+                <div>
+                  <svg width="24" height="24">
+                    <use href="/src/img/sprite.svg#icon-time"></use>
+                  </svg>
+                  <p>6 min read | 24 Apr 2021</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  srcset="./src/img/img3.jpg 1x, ./src/img/img3@2x.jpg 2x"
+                  src="./src/img/img3.jpg"
+                  width="200"
+                  height="148"
+                  alt="Sunny house"
+                />
+                <div>
+                  <img
+                    srcset="
+                      ./src/img/Darlene.png    1x,
+                      ./src/img/Darlene@2x.png 2x
+                    "
+                    src="./src/img/Darlene.png"
+                    width="100"
+                    height="100"
+                    alt="User"
+                  />
+                  <p>Darlene Robertson</p>
+                </div>
+                <h3>
+                  The best way to know the quality of the house we want to buy
+                </h3>
+                <div>
+                  <svg width="24" height="24">
+                    <use href="/src/img/sprite.svg#icon-time"></use>
+                  </svg>
+                  <p>2 min read | 24 Apr 2021</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div></div>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div>
+          <h2>Subscribe For More Info and update from Hounter</h2>
+          <div>
+            <svg width="20" height="16">
+              <use href="/src/img/sprite.svg#icon-mail"></use>
+            </svg>
+            <input type="text" placeholder="Your email here" />
+            <button type="submit">Subscribe Now</button>
+            <img
+              srcset="./src/img/orange.png 1x, ./src/img/orange@2x.png 2x"
+              src="./src/img/orange.png"
+              width="90"
+              height="90"
+              alt="User"
+            />
+            <img
+              srcset="./src/img/Robert.png 1x, ./src/img/Robert@2x.png 2x"
+              src="./src/img/Robert.png"
+              width="36"
+              height="36"
+              alt="User"
+            />
+            <img
+              srcset="./src/img/Courtney.png 1x, ./src/img/Courtney@2x.png 2x"
+              src="./src/img/Courtney.png"
+              width="110"
+              height="110"
+              alt="User"
+            />
+            <img
+              srcset="./src/img/noname.png 1x, ./src/img/noname@2x.png 2x"
+              src="./src/img/noname.png"
+              width="110"
+              height="110"
+              alt="User"
+            />
+            <img
+              srcset="./src/img/white.png 1x, ./src/img/white@2x.png 2x"
+              src="./src/img/white.png"
+              width="81"
+              height="81"
+              alt="White chair"
+            />
+            <img
+              srcset="./src/img/building.png 1x, ./src/img/building@2x.png 2x"
+              src="./src/img/building.png"
+              width="54"
+              height="54"
+              alt="Dark building"
+            />
+            <img
+              srcset="./src/img/corner.png 1x, ./src/img/corner@2x.png 2x"
+              src="./src/img/corner.png"
+              width="70"
+              height="70"
+              alt="Corner of house"
+            />
+            <img
+              srcset="
+                ./src/img/white-chair.png    1x,
+                ./src/img/white-chair@2x.png 2x
+              "
+              src="./src/img/white-chair.png"
+              width="55"
+              height="55"
+              alt="white chair with plant"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="form">
+        <div>
+          <div>
+            <h2>Would you like to join?</h2>
+            <p>
+              Quickly get three quotes from these local that people love in
+              online reviews.
+            </p>
+            <p>Pick the whose estimate suits you best.</p>
+            <p>
+              We then make sure the work i done to your complete satisfaction.
+            </p>
+            <img
+              srcset="./src/img/create.png 1x, ./src/img/create@2x.png 2x"
+              src="./src/img/create.png"
+              width="228"
+              height="178"
+              alt="Create a website"
+            />
+          </div>
+          <div>
+            <form action="submit">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" />
+              </div>
+              <div>
+                <label for="surname">Surname</label>
+                <input id="surname" type="text" placeholder="Your Surname" />
+              </div>
+              <div>
+                <label for="education">Education</label>
+                <select name="education" id="education">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="school">High school</option>
+                  <option value="bachelor">Bachelor</option>
+                  <option value="master">Master</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="label-container-checkbox">
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  id="user-privacy"
+                  name="user-privacy"
+                  value="true"
+                  required
+                />
+                <label for="user-privacy" class="check">
+                  <span class="span-icon">
+                    <svg class="icon-check" width="16" height="16">
+                      <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="text-checkbox"
+                    >I give consent to the processing of my personal data given
+                    in the contact form above under the terms and conditions of
+                    Grid Dynamics Privacy Policy.
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a href="./index.html">
+          <svg width="115" height="36">
+            <use href="/src/img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <p>
+          We provide information about properties such as houses, villas and
+          apartments to help people find their dream home
+        </p>
+        <ul>
+          <li>
+            <a href="">
+              <svg width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <td>Property</td>
+            <td>Article</td>
+            <td>Contact</td>
+          </tr>
+          <tr>
+            <td>House</td>
+            <td>New Article</td>
+            <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+          </tr>
+          <tr>
+            <td>Apartment</td>
+            <td>Popular Article</td>
+            <td>(671) 555-0110</td>
+          </tr>
+          <tr>
+            <td>Villa</td>
+            <td>Most Read</td>
+            <td>info@hounter.com</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Tips & Tricks</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <svg width="24" height="24">
+          <use href="/src/img/sprite.svg#icon-coockie"></use>
+        </svg>
+        <p>We are using cookies</p>
+        <svg width="24" height="24">
+          <use href="/src/img/sprite.svg#icon-close"></use>
+        </svg>
+      </div>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
