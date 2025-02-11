@@ -4,177 +4,185 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/css/style.css" />
     <title>Hounter</title>
   </head>
   <body>
-    <header>
-      <a href="./index.html">
-        <svg width="115" height="36">
-          <use href="/src/img/sprite.svg#icon-logo"></use>
-        </svg>
+    <header class="header">
+      <a class="logo" href="./index.html">
+        <img
+          srcset="./src/img/logo.png 1x, ./src/img/logo@2x.png 2x"
+          src="./src/img/logo.png"
+          width="115"
+          height="36"
+          alt="Logo"
+        />
       </a>
-      <nav>
-        <ul>
-          <li><a href="">About us</a></li>
-          <li><a href="">Article</a></li>
-          <li><a href="">Property</a></li>
+      <nav class="nav">
+        <ul class="list">
+          <li class="item"><a class="link" href="">About us</a></li>
+          <li class="item"><a class="link" href="">Article</a></li>
+          <li class="item"><a class="link" href="">Property</a></li>
         </ul>
-        <button type="submit">Sign Up</button>
+        <button class="btn" type="submit">Sign Up</button>
       </nav>
     </header>
     <main>
       <section class="hero">
-        <div>
-          <div>
-            <h1>Find The Place To Live Your Dreams Easily Here</h1>
-            <h3>
+        <div class="container">
+          <div class="left">
+            <h1 class="title">
+              Find The Place To Live
+              <span class="green">Your Dreams</span> Easily Here
+            </h1>
+            <h3 class="text">
               Everything you need about finding your place to live will be here,
               where it will be easier for you
             </h3>
-            <div>
-              <input type="text" />
-              <svg width="24" height="24">
+            <div class="input">
+              <input
+                class="search"
+                type="text"
+                placeholder="Search for the location you want!"
+              />
+              <svg class="map" width="24" height="24">
                 <use href="/src/img/sprite.svg#icon-map"></use>
               </svg>
-              <div>
-                <button type="button">Search</button>
-                <svg width="24" height="24">
+              <div class="btn-container">
+                <button class="search-button" type="button">Search</button>
+                <svg class="arrow" width="24" height="24">
                   <use href="/src/img/sprite.svg#icon-arrow2"></use>
                 </svg>
               </div>
             </div>
-            <div>
-              <h3>Our Partnership</h3>
-              <ul>
-                <li>
-                  <img
-                    srcset="
-                      ./src/img/traveloka_logo2.png    1x,
-                      ./src/img/traveloka_logo2@2x.png 2x
-                    "
-                    src="./src/img/traveloka_logo2.png"
-                    width="82"
-                    height="64"
-                    alt="logo of traveloka"
-                  />
-                </li>
-                <li>
-                  <img
-                    srcset="
-                      ./src/img/traveloka_logo5.png    1x,
-                      ./src/img/traveloka_logo5@2x.png 2x
-                    "
-                    src="./src/img/traveloka_logo5.png"
-                    width="82"
-                    height="64"
-                    alt="logo of ticket.com"
-                  />
-                </li>
-                <li>
-                  <img
-                    srcset="
-                      ./src/img/traveloka_logo3.png    1x,
-                      ./src/img/traveloka_logo3@2x.png 2x
-                    "
-                    src="./src/img/traveloka_logo3.png"
-                    width="82"
-                    height="64"
-                    alt="logo of airbnb"
-                  />
-                </li>
-                <li>
-                  <img
-                    srcset="
-                      ./src/img/traveloka_logo4.png    1x,
-                      ./src/img/traveloka_logo4@2x.png 2x
-                    "
-                    src="./src/img/traveloka_logo4.png"
-                    width="82"
-                    height="64"
-                    alt="logo of tripadvisor"
-                  />
-                </li>
-              </ul>
-            </div>
+            <h3 class="subtitle">Our Partnership</h3>
+            <ul class="list">
+              <li>
+                <img
+                  srcset="
+                    ./src/img/traveloka_logo2.png    1x,
+                    ./src/img/traveloka_logo2@2x.png 2x
+                  "
+                  src="./src/img/traveloka_logo2.png"
+                  width="82"
+                  height="64"
+                  alt="logo of traveloka"
+                />
+              </li>
+              <li>
+                <img
+                  srcset="
+                    ./src/img/traveloka_logo5.png    1x,
+                    ./src/img/traveloka_logo5@2x.png 2x
+                  "
+                  src="./src/img/traveloka_logo5.png"
+                  width="82"
+                  height="64"
+                  alt="logo of ticket.com"
+                />
+              </li>
+              <li>
+                <img
+                  srcset="
+                    ./src/img/traveloka_logo3.png    1x,
+                    ./src/img/traveloka_logo3@2x.png 2x
+                  "
+                  src="./src/img/traveloka_logo3.png"
+                  width="82"
+                  height="64"
+                  alt="logo of airbnb"
+                />
+              </li>
+              <li>
+                <img
+                  srcset="
+                    ./src/img/traveloka_logo4.png    1x,
+                    ./src/img/traveloka_logo4@2x.png 2x
+                  "
+                  src="./src/img/traveloka_logo4.png"
+                  width="82"
+                  height="64"
+                  alt="logo of tripadvisor"
+                />
+              </li>
+            </ul>
           </div>
-          <div>
+          <div class="right">
             <img
-              srcset="./src/img/hero.jpg 1x, ./src/img/hero@2x.jpg 2x"
-              src="./src/img/hero.jpg"
-              width="82"
-              height="64"
-              alt="modern white building"
+              class="image"
+              srcset="./src/img/lines.png 1x, ./src/img/lines@2x.png 2x"
+              src="./src/img/lines.png"
+              width="526"
+              height="347"
+              alt="modern white building with color lines on it"
             />
-            <div>
-              <ul>
-                <li>
-                  <div>
+            <div class="carousel">
+              <ul class="followers">
+                <li class="followers-item">
+                  <div class="set">
                     <img
-                      srcset="
-                        ./src/img/ellipse4.png    1x,
-                        ./src/img/ellipse4@2x.png 2x
-                      "
-                      src="./src/img/ellipse4.png"
-                      width="120"
-                      height="120"
+                      class="user first"
+                      src="./src/img/blonde.jpeg"
+                      width="56"
+                      height="56"
                       alt="user"
                     />
                     <img
-                      srcset="
-                        ./src/img/ellipse5.png    1x,
-                        ./src/img/ellipse5@2x.png 2x
-                      "
-                      src="./src/img/ellipse5.png"
-                      width="120"
-                      height="120"
+                      class="user second"
+                      src="./src/img/green.jpeg"
+                      width="56"
+                      height="56"
                       alt="user"
                     />
                     <img
-                      srcset="
-                        ./src/img/orange.png    1x,
-                        ./src/img/orange@2x.png 2x
-                      "
-                      src="./src/img/orange.png"
-                      width="120"
-                      height="120"
+                      class="user third"
+                      src="./src/img/orange.jpeg"
+                      width="56"
+                      height="56"
                       alt="user"
                     />
                   </div>
                   <div>
-                    <h2>1K+ People</h2>
-                    <h3>Successfully Getting Home</h3>
+                    <h2 class="users-title">1K+ People</h2>
+                    <h3 class="titles-box">Successfully Getting Home</h3>
                   </div>
                 </li>
-                <li>
+                <li class="followers-item">
                   <img
+                    class="houses"
                     srcset="
                       ./src/img/56houses.png    1x,
                       ./src/img/56houses@2x.png 2x
                     "
                     src="./src/img/56houses.png"
-                    width="120"
-                    height="120"
+                    width="56"
+                    height="56"
                     alt="user"
                   />
                   <div>
-                    <h2>56 Houses</h2>
-                    <h3>Sold Monthly</h3>
+                    <h2 class="users-title">56 Houses</h2>
+                    <h3 class="titles-box">Sold Monthly</h3>
                   </div>
                 </li>
-                <li>
+                <li class="followers-item">
                   <img
-                    srcset="
-                      ./src/img/ellipse6.png    1x,
-                      ./src/img/ellipse6@2x.png 2x
-                    "
-                    src="./src/img/ellipse6.png"
-                    width="120"
-                    height="120"
+                    class="user"
+                    src="./src/img/violet.jpeg"
+                    width="56"
+                    height="56"
                     alt="user"
                   />
                   <div>
-                    <h2>4K+</h2>
-                    <h3>People Looking for New Homes</h3>
+                    <h2 class="users-title">4K+</h2>
+                    <h3 class="titles-box">People Looking for New Homes</h3>
                   </div>
                 </li>
               </ul>
@@ -183,7 +191,7 @@
         </div>
       </section>
       <section class="featured">
-        <div>
+        <div class="container">
           <p>Our Recommendation</p>
           <div>
             <h2>Featured House</h2>
@@ -375,7 +383,7 @@
         </div>
       </section>
       <section class="tour">
-        <div>
+        <div class="container">
           <p>Ready to Sell!</p>
           <div>
             <h2>Let’s tour and see our house!</h2>
@@ -469,7 +477,7 @@
         </div>
       </section>
       <section class="about">
-        <div>
+        <div class="container">
           <p>See Our Review</p>
           <h2>What Our User Say About Us</h2>
           <div>
@@ -596,7 +604,7 @@
         </div>
       </section>
       <section class="more">
-        <div>
+        <div class="container">
           <p>See tips and trick from our partnership</p>
           <h2>Find out more about selling and buying homes</h2>
           <button type="button">More articles</button>
@@ -696,7 +704,7 @@
         </div>
       </section>
       <section class="subscribe">
-        <div>
+        <div class="container">
           <h2>Subscribe For More Info and update from Hounter</h2>
           <div>
             <svg width="20" height="16">
@@ -767,7 +775,7 @@
         </div>
       </section>
       <section class="form">
-        <div>
+        <div class="container">
           <div>
             <h2>Would you like to join?</h2>
             <p>
@@ -841,7 +849,7 @@
       </section>
     </main>
     <footer>
-      <div>
+      <div class="container">
         <a href="./index.html">
           <svg width="115" height="36">
             <use href="/src/img/sprite.svg#icon-logo"></use>
