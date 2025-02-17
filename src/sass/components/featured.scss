@@ -1,0 +1,209 @@
+@use '../abstracts/variables' as *;
+
+.featured {
+  padding-left: 8.4rem;
+}
+
+.featured .container {
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.menu {
+  display: flex;
+  width: 1192px;
+  margin-bottom: 3.8rem;
+  &-filters {
+    display: flex;
+    margin-right: auto;
+    gap: 2.7rem;
+    &-input {
+      display: none;
+      &:checked + .menu-filters-item {
+        background-color: $green-light;
+        border-color: transparent;
+      }
+    }
+    &-item {
+      display: flex;
+      border: 1px solid $green-dark;
+      border-radius: 10rem;
+      padding: 1.2rem 2.4rem;
+      height: 4.8rem;
+      gap: 0.8rem;
+
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 1.71429;
+      text-transform: capitalize;
+      color: $green-dark;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:focus,
+      &:hover,
+      &:active,
+      &-input:checked + &-item {
+        background-color: $green-light;
+        border: transparent;
+      }
+    }
+    &-icon {
+      fill: $green-dark;
+    }
+  }
+  &-arrow-container {
+    display: flex;
+    gap: 1.6rem;
+    &-btn {
+      border: 1px solid $green-primary;
+      border-radius: 10rem;
+      padding: 1.2rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      background-color: $white;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        border: 1px solid $green-primary;
+        background-color: $green-primary;
+      }
+
+      &:hover .menu-arrow-container-icon,
+      &:focus .menu-arrow-container-icon {
+        fill: $white;
+      }
+    }
+    &-icon {
+      fill: $green-primary;
+      stroke-width: 2px;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+.featured .subtitle {
+  margin-left: 4rem;
+  margin-right: auto;
+}
+
+.left-arrow {
+  transform: rotate(180deg);
+}
+
+.featured-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.featured-list {
+  display: flex;
+  gap: 3.2rem;
+  overflow-y: hidden;
+  &:-webkit-scrollbar {
+    display: none;
+  }
+  &-item {
+    flex: 0 0 auto;
+    border-radius: 2px;
+    width: 37.6rem;
+    scroll-snap-align: start;
+    &:nth-child(1),
+    &:nth-child(1n + 3) {
+      .featured-list-item-svg {
+        background-color: $pink;
+        &-icon {
+          fill: $red;
+        }
+        &-text {
+          color: $red;
+        }
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(2n + 3) {
+      .featured-list-item-svg {
+        background-color: $blue-light;
+        &-icon {
+          fill: $blue;
+        }
+        &-text {
+          color: $blue;
+        }
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(3n + 3) {
+      .featured-list-item-svg {
+        background-color: $green-light;
+        &-icon {
+          fill: $green-primary;
+        }
+        &-text {
+          color: $green-primary;
+        }
+      }
+    }
+    &-box {
+      position: relative;
+      margin-bottom: 2.4rem;
+    }
+    &-img {
+      border-radius: 2.4rem;
+      width: 37.6rem;
+      height: 38.2rem;
+    }
+    &-svg {
+      position: absolute;
+      bottom: 1.6rem;
+      left: 1.6rem;
+      display: flex;
+      align-items: center;
+      border-radius: 3.2rem;
+      padding: 0.8rem 1.6rem;
+      width: max-content;
+      height: 3.4rem;
+      gap: 0.8rem;
+      &-text {
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+    }
+    &-title {
+      font-weight: 500;
+      font-size: 2.4rem;
+      text-transform: capitalize;
+      color: $black;
+      margin-bottom: 0.8rem;
+    }
+    &-price {
+      font-weight: 500;
+      font-size: 2rem;
+      text-transform: capitalize;
+      color: $grey-dark;
+      margin-bottom: 2.4rem;
+    }
+    &-container {
+      display: flex;
+      align-items: center;
+      max-width: 34rem;
+      gap: 1.6rem;
+    }
+    &-user {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 1.33333;
+      color: $black;
+      &-city {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.71429;
+        color: $grey-primary;
+      }
+    }
+  }
+}
+
+.orange {
+  border-radius: 100%;
+}

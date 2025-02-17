@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 @mixin button($height, $width) {
   border-radius: 10rem;
@@ -14,4 +14,20 @@
   text-transform: capitalize;
   text-align: center;
   color: $white;
+}
+
+@mixin user($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  border-radius: 100%;
+  border: 2px solid $white;
+  box-shadow: 0 0.9rem 3.2rem 0 rgba(89, 92, 219, 0.1);
+}
+
+@mixin img($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  border-radius: 24px;
 }

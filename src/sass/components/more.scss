@@ -1,0 +1,114 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.more .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.paragraph {
+  margin: 0.8rem 0 0.6rem 0;
+}
+
+.more {
+  &-btn {
+    margin: 1.6rem 0 4.8rem 0;
+    @include button(4.8rem, 14rem);
+  }
+  &-container {
+    display: flex;
+    gap: 3.2rem;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      &-item {
+        display: flex;
+        width: 580px;
+        height: 148px;
+        gap: 3.2rem;
+        &-img {
+          border-radius: 16px;
+        }
+        &-box {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          text-align: start;
+          &-top {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            margin-bottom: 1.2rem;
+          }
+          &-title {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 1.33333;
+            color: $black;
+            margin-bottom: 1.6rem;
+          }
+          &-bottom {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            &-icon {
+              fill: $grey-primary;
+            }
+            &-text {
+              font-size: 1.4rem;
+              line-height: 1.71429;
+              color: $grey-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-name {
+    font-size: 1.4rem;
+    line-height: 1.71429;
+    color: #3c4563;
+  }
+}
+
+.more {
+  &-right {
+    max-width: 58rem;
+    align-items: start;
+    text-align: start;
+    &-img {
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+    }
+    &-box {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+  &-text {
+    margin-top: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.more-blue {
+  position: absolute;
+  left: 0;
+  top: -17rem;
+  height: 67.8rem;
+  z-index: -1;
+}
+
+.more-green {
+  position: absolute;
+  left: 0;
+  top: 8rem;
+  height: 67.8rem;
+  z-index: -1;
+}

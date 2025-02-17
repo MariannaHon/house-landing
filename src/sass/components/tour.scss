@@ -1,0 +1,128 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.tour {
+  position: relative;
+  padding: 0 12.4rem 0 8.4rem;
+  &-left {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    margin-right: 19.5rem;
+    width: 52.4rem;
+    &-subtitle {
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: $grey-primary;
+      opacity: 0.75;
+      margin: 1.6rem 0 2.4rem 0;
+    }
+    &-paragraph {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $black;
+      margin-bottom: 2.4rem;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 44rem;
+      max-height: 8rem;
+      gap: 1.6rem 5.3rem;
+      &-item {
+        display: flex;
+        max-width: 19.3rem;
+        gap: 1.6rem;
+        align-items: center;
+        &-icon {
+          border-radius: 4px;
+          fill: #626687;
+        }
+        &-text {
+          font-weight: 500;
+          font-size: 1.6rem;
+          color: $grey-dark;
+        }
+      }
+    }
+    &-container {
+      margin-left: 4rem;
+    }
+    &-container-list {
+      margin-bottom: 3.2rem;
+      padding-bottom: 3.2rem;
+      border-bottom: 2px solid $grey-light;
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      &-img {
+        margin-right: 1.6rem;
+      }
+      &-container {
+        margin-right: 8.4rem;
+      }
+      &-box-btn {
+        position: relative;
+      }
+      &-icon {
+        position: absolute;
+        top: 1.2rem;
+        left: 2.4rem;
+        fill: $white;
+      }
+      &-btn {
+        @include button(4.8rem, 17.1rem);
+        padding-left: 5rem;
+      }
+    }
+  }
+}
+
+.tour-right {
+  position: relative;
+  width: 52.8rem;
+  height: 45.9rem;
+  &-video {
+    border-radius: 0.8rem;
+    width: 47.8rem;
+    height: 41.6rem;
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    margin: 0 0 4.3rem 5rem;
+    &-play {
+      position: absolute;
+      top: 18.4rem;
+      left: 26rem;
+    }
+  }
+  &-images {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    gap: 0.8rem;
+    &-img {
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+.sofa {
+  margin-right: 4px;
+}
+
+.decor-red {
+  position: absolute;
+  top: -60%;
+  right: 0;
+}
+
+.decor-yellow {
+  position: absolute;
+  top: -40%;
+  right: 0;
+}

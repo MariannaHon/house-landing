@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.subscribe .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 6.8rem;
+  margin: 0 auto;
+  max-width: 119.2rem;
+  height: 31.2rem;
+  background-image: image-set(
+    url(../img/violet.png) 1x,
+    url(../img/violet@2x.png) 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3.2rem;
+}
+
+.sub {
+  &-title {
+    max-width: 42.4rem;
+    margin-bottom: 4rem;
+  }
+  &-mail {
+    position: absolute;
+    top: 1.6rem;
+    left: 2.4rem;
+    fill: $blue;
+  }
+  &-btn {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    @include button(4.8rem, 15.3rem);
+  }
+  &-orange {
+    @include user(17.3rem, 6.3rem);
+  }
+  &-robert {
+    @include user(7.1rem, 20rem);
+  }
+  &-courtney {
+    @include user(14.3rem, 96rem);
+  }
+  &-noname {
+    @include user(10.7rem, 107.8rem);
+  }
+  &-white {
+    @include img(3.8rem, 4rem);
+  }
+  &-building {
+    @include img(17.8rem, 19.1rem);
+  }
+  &-corner {
+    @include img(4.4rem, 92.6rem);
+  }
+  &-chair {
+    @include img(19.7rem, 106.8rem);
+  }
+}

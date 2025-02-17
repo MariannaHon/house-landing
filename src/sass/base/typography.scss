@@ -6,3 +6,51 @@ body {
   line-height: 1.5;
   color: $grey-dark;
 }
+
+.subtitle {
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  color: $black;
+}
+
+.line {
+  display: inline-block;
+  width: 3.2rem;
+  height: 1px;
+  background-color: $yellow;
+  margin: 8px 8px 0 0;
+}
+
+.decor {
+  display: flex;
+}
+
+.subtitle-section {
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  color: $yellow;
+  margin-bottom: 0.4rem;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.33333;
+  color: $black;
+}
+
+.city {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  color: $grey-primary;
+}
+
+.small-text {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $grey-dark;
+  opacity: 0.75;
+}

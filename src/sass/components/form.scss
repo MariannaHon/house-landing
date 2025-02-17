@@ -1,0 +1,170 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography.scss" as *;
+
+.form {
+  padding-top: 12rem;
+  &-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding: 4rem;
+    width: 47.8rem;
+    box-shadow: 0 8px 32px 0 rgba(12, 21, 55, 0.09);
+    background: $white;
+    background-image: image-set(
+        url(../img/create-green.png) 1x,
+        url(../img/create-green.png) 2x
+      ),
+      image-set(url(../img/create-blue.png) 1x, url(../img/create-blue.png) 2x);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -50% 120%, 100% 120%;
+    background-size: 39.9rem 34.4rem, 40.6rem 36.6rem;
+
+    &-text {
+      text-align: center;
+      margin: 2.4rem 0;
+    }
+  }
+}
+
+.form .container {
+  display: flex;
+  max-width: 119.2rem;
+  margin: 0 auto;
+  gap: 3.2rem;
+}
+
+.form-title {
+  margin-bottom: 0.4rem;
+}
+
+.green-line {
+  display: inline-block;
+  border-radius: 4px;
+  width: 40px;
+  height: 2px;
+  background-color: $green-primary;
+}
+
+.form-right {
+  border-radius: 0.8rem;
+  padding: 4rem;
+  width: 68.2rem;
+  height: 59.2rem;
+  box-shadow: 0 0.8rem 3.2rem 0 rgba(12, 21, 55, 0.09);
+  background: $white;
+  &-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-label {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.71429;
+    color: &black;
+  }
+  &-input {
+    border: 1px solid $grey-light;
+    border-radius: 2.8rem;
+    padding: 1.6rem 2.4rem;
+    width: 49.6rem;
+    height: 5.6rem;
+    appearance: none;
+    &::placeholder {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.71429;
+      color: $grey-primary;
+    }
+  }
+  &-textarea {
+    border: 1px solid $grey-light;
+    border-radius: 2.8rem;
+    padding: 1.6rem 2.4rem;
+    width: 49.6rem;
+    height: 14.4rem;
+  }
+}
+
+.textarea {
+  align-items: start;
+}
+
+.option {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  color: $grey-primary;
+  //   background-image: url("arrow-down.svg"); /* Встав свою іконку */
+  //   background-repeat: no-repeat;
+  //   background-position: right 10px center;
+  //   background-size: 12px;
+}
+
+.label-container-checkbox {
+  margin-left: 10.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.span-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  border: 1px solid $green-primary;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.icon-check {
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check {
+  display: flex;
+  align-items: start;
+}
+
+input:checked + .check > .span-icon {
+  //   stroke: #f4f4fd;
+  //   stroke-width: 1px;
+  background: $green-primary;
+  border: none;
+}
+
+input:checked + .check > .span-icon .icon-check {
+  fill: white; /* Робимо галочку видимою */
+}
+
+.text-checkbox {
+  max-width: 46.4rem;
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  color: $grey-dark;
+}
