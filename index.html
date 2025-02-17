@@ -437,20 +437,6 @@
       </section>
       <section class="tour">
         <div class="container">
-          <img class="decor-red"
-            srcset="./src/img/red.png 1x, ./src/img/red@2x.png 2x"
-            src="./src/img/red.png"
-            width="539"
-            height="674"
-            alt="decoration"
-          />
-          <img class="decor-yellow"
-            srcset="./src/img/yellow.png 1x, ./src/img/yellow@2x.png 2x"
-            src="./src/img/yellow.png"
-            width="482"
-            height="678"
-            alt="decoration"
-          />
           <div class="tour-left">
             <div class="decor">
               <span class="line"></span>
@@ -944,12 +930,19 @@
               </div>
               <div class="form-right-container">
                 <label class="form-right-label" for="education">Education</label>
-                <select class="form-right-input" name="education" id="education">
-                  <option class="option" value="" disabled selected hidden>Select one</option>
-                  <option value="school">High school</option>
-                  <option value="bachelor">Bachelor</option>
-                  <option value="master">Master</option>
-                </select>
+                <div class="form-select-container">
+                  <input class="select-input" name="education" id="education" placeholder="Select One" />
+                  <svg class="form-icon" width="24" height="24">
+                    <use href="/src/img/sprite.svg#icon-arrow2"></use>
+                  </svg>
+                  <div class="custom-select">
+                    <div class="select-items">
+                      <div data-value="school">High school</div>
+                      <div data-value="bachelor">Bachelor</div>
+                      <div data-value="master">Master</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="form-right-container textarea">
                 <label class="form-right-label" for="message">Message</label>
@@ -971,7 +964,7 @@
                 <label for="user-privacy" class="check">
                   <span class="span-icon">
                     <svg class="icon-check" width="16" height="16">
-                      <use href="./images/icons.svg#icon-check"></use>
+                      <use href="/src/img/sprite.svg#icon-check"></use>
                     </svg>
                   </span>
                   <span class="text-checkbox"
@@ -986,22 +979,18 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer-left">
-        <a class="logo" href="./index.html">
-          <img
-            srcset="./src/img/logo.png 1x, ./src/img/logo@2x.png 2x"
-            src="./src/img/logo.png"
-            width="115"
-            height="36"
-            alt="Logo"
-          />
+    <footer>
+      <div class="container">
+        <a href="./index.html">
+          <svg width="115" height="36">
+            <use href="/src/img/sprite.svg#icon-logo"></use>
+          </svg>
         </a>
-        <p class="footer-left-text">
+        <p>
           We provide information about properties such as houses, villas and
           apartments to help people find their dream home
         </p>
-        <ul class="footer-left-list">
+        <ul>
           <li>
             <a href="">
               <svg width="32" height="32">
@@ -1025,41 +1014,41 @@
           </li>
         </ul>
       </div>
-      <div class="footer-right">
-        <table class="footer-table">
-          <tr class="footer-table-row">
-            <td class="footer-table-title">Property</td>
-            <td class="footer-table-title">Article</td>
-            <td class="footer-table-title">Contact</td>
+      <div>
+        <table>
+          <tr>
+            <td>Property</td>
+            <td>Article</td>
+            <td>Contact</td>
           </tr>
-          <tr class="footer-table-row">
-            <td class="footer-table-text">House</td>
-            <td class="footer-table-text">New Article</td>
-            <td class="footer-table-text">2464 Royal Ln. Mesa, New Jersey 45463</td>
+          <tr>
+            <td>House</td>
+            <td>New Article</td>
+            <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
           </tr>
-          <tr class="footer-table-row">
-            <td class="footer-table-text">Apartment</td>
-            <td class="footer-table-text">Popular Article</td>
-            <td class="footer-table-text">(671) 555-0110</td>
+          <tr>
+            <td>Apartment</td>
+            <td>Popular Article</td>
+            <td>(671) 555-0110</td>
           </tr>
-          <tr class="footer-table-row">
-            <td class="footer-table-text">Villa</td>
-            <td class="footer-table-text">Most Read</td>
-            <td class="footer-table-text">info@hounter.com</td>
+          <tr>
+            <td>Villa</td>
+            <td>Most Read</td>
+            <td>info@hounter.com</td>
           </tr>
-          <tr class="footer-table-row">
-            <td class="footer-table-text"></td>
-            <td class="footer-table-text">Tips & Tricks</td>
-            <td class="footer-table-text"></td>
+          <tr>
+            <td></td>
+            <td>Tips & Tricks</td>
+            <td></td>
           </tr>
         </table>
       </div>
-      <div class="footer-cookie">
-        <svg class="icon-cookie" width="24" height="24">
-          <use href="/src/img/sprite.svg#icon-cookie"></use>
+      <div>
+        <svg width="24" height="24">
+          <use href="/src/img/sprite.svg#icon-coockie"></use>
         </svg>
-        <p class="footer-cookie-text">We are using cookies</p>
-        <svg class="icon-close" width="24" height="24">
+        <p>We are using cookies</p>
+        <svg width="24" height="24">
           <use href="/src/img/sprite.svg#icon-close"></use>
         </svg>
       </div>

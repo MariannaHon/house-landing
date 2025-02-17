@@ -98,16 +98,77 @@
   align-items: start;
 }
 
-.option {
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 1.71429;
-  color: $grey-primary;
-  //   background-image: url("arrow-down.svg"); /* Встав свою іконку */
-  //   background-repeat: no-repeat;
-  //   background-position: right 10px center;
-  //   background-size: 12px;
+// ============================================
+
+.form-select-container {
+  position: relative;
 }
+
+.select-input {
+  border: 1px solid $grey-light;
+  border-radius: 2.8rem;
+  padding: 1.6rem 2.4rem;
+  width: 49.6rem;
+  height: 5.6rem;
+  appearance: none;
+  &::placeholder {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.71429;
+    color: $grey-primary;
+  }
+}
+
+.form-icon {
+  fill: $grey-primary;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 1.6rem;
+  right: 2.4rem;
+}
+
+.custom-select {
+  position: relative;
+  width: 49.6rem;
+  height: 5.6rem;
+  display: none;
+}
+
+// .select-items {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   right: 0;
+//   border: 1px solid $grey-light;
+//   border-radius: 2.8rem;
+//   padding: 1.6rem 2.4rem;
+//   width: 49.6rem;
+//   height: 5.6rem;
+//   &::placeholder {
+//     font-weight: 500;
+//     font-size: 1.4rem;
+//     line-height: 1.71429;
+//     color: $grey-primary;
+//   }
+//   display: none;
+//   z-index: 10;
+// }
+
+// .select-items div {
+//   padding: 1.2rem 2.4rem;
+//   cursor: pointer;
+//   transition: background 0.3s;
+// }
+
+// .select-items div:hover {
+//   background: #f0f0f0;
+// }
+
+// .select-hide {
+//   display: none;
+// }
+
+// ============================================
 
 .label-container-checkbox {
   margin-left: 10.5rem;
@@ -152,14 +213,13 @@
 }
 
 input:checked + .check > .span-icon {
-  //   stroke: #f4f4fd;
-  //   stroke-width: 1px;
   background: $green-primary;
   border: none;
 }
 
 input:checked + .check > .span-icon .icon-check {
-  fill: white; /* Робимо галочку видимою */
+  stroke: white;
+  stroke-width: 2px;
 }
 
 .text-checkbox {
