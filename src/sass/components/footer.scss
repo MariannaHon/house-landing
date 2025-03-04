@@ -1,13 +1,16 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 .footer {
   position: relative;
   display: flex;
-  padding: 0 12.4rem 10.6rem 12.4rem;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 0 8rem 10.6rem 8rem;
   z-index: 10;
   &-left {
     max-width: 37.6rem;
     margin-right: auto;
+    margin-bottom: 4rem;
     &-text {
       font-size: 1.4rem;
       line-height: 1.71429;
@@ -22,7 +25,7 @@
 }
 
 .footer::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -5rem;
   left: 0;
@@ -44,8 +47,17 @@
   margin: 0 0 1.6rem 0;
 }
 
+.footer-right {
+  width: 100%;
+  max-width: 32rem;
+  overflow-x: hidden;
+}
+
 .footer-table {
-  border-spacing: 3.2rem 1.6rem;
+  border-spacing: 0 1.6rem;
+  width: 100%;
+  max-width: 32rem;
+  table-layout: auto;
   &-title {
     font-weight: 500;
     font-size: 1.8rem;
@@ -73,8 +85,9 @@
   z-index: 999;
   border-radius: 2.8rem;
   padding: 1.6rem 4rem;
-  width: 46.5rem;
-  height: 5.6rem;
+  min-width: 28rem;
+  max-width: 46.5rem;
+  height: auto;
   background: $green-light;
   &-text {
     font-weight: 600;
@@ -92,5 +105,50 @@
 
 .icon-close {
   stroke: $black;
-  stroke-width: 2px;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  .footer {
+    flex-direction: row;
+    &-left {
+      margin-right: 6rem;
+    }
+  }
+
+  .footer-right {
+    width: 100%;
+    max-width: 32rem;
+    overflow-x: visible;
+  }
+  .footer-table {
+    max-width: 65rem;
+  }
+
+  .footer-cookie {
+    width: 46.5rem;
+    height: 5.6rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer {
+    padding: 0 15.4rem 10.6rem 15.4rem;
+  }
+  .hide {
+    display: table-cell;
+  }
+  .footer-right {
+    max-width: 69rem;
+  }
+
+  .footer-table {
+    border-spacing: 3.2rem 1.6rem;
+    max-width: 68.2rem;
+  }
 }

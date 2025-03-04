@@ -26,19 +26,31 @@
           alt="Logo"
         />
       </a>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a class="nav-list-item-link" href="">About us</a>
+      <button type="button" class="nav-button">
+        <svg class="nav-icon" width="20" height="20">
+          <use href="/src/img/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <nav class="nav nav-mob hidden">
+        <button type="button" class="nav-button-close">
+          <svg class="nav-close" width="20" height="20">
+            <use href="/src/img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="nav-list nav-list-mob">
+          <li class="nav-list-item nav-list-item">
+            <a class="nav-list-item-link" href="#about">About us</a>
           </li>
-          <li class="nav-list-item">
-            <a class="nav-list-item-link" href="">Article</a>
+          <li class="nav-list-item nav-list-item">
+            <a class="nav-list-item-link" href="#article">Article</a>
           </li>
-          <li class="nav-list-item">
-            <a class="nav-list-item-link" href="">Property</a>
+          <li class="nav-list-item nav-list-item">
+            <a class="nav-list-item-link" href="#featured">Property</a>
           </li>
         </ul>
-        <button class="nav-btn" type="submit">Sign Up</button>
+        <a href="./index.html">
+          <button class="nav-btn" type="submit">Sign Up</button>
+        </a>
       </nav>
     </header>
     <main>
@@ -54,7 +66,7 @@
               where it will be easier for you
             </h3>
             <div class="input">
-              <input
+              <input id="search"
                 class="input-search"
                 type="text"
                 placeholder="Search for the location you want!"
@@ -63,7 +75,7 @@
                 <use href="/src/img/sprite.svg#icon-map"></use>
               </svg>
               <div class="left-btn-container">
-                <button class="left-btn-container-search-button hero-btn" type="button">
+                <button class="left-btn-container-search-button hero-btn" type="submit">
                   Search
                 </button>
                 <svg class="hero-arrow" width="24" height="24">
@@ -124,14 +136,6 @@
             </ul>
           </div>
           <div class="right">
-            <img
-              class="right-image"
-              srcset="./src/img/lines.png 1x, ./src/img/lines@2x.png 2x"
-              src="./src/img/lines.png"
-              width="526"
-              height="347"
-              alt="modern white building with color lines on it"
-            />
             <div class="right-carousel">
               <ul class="right-carousel-followers">
                 <li class="right-carousel-followers-item">
@@ -139,22 +143,22 @@
                     <img
                       class="right-carousel-followers-item-user first"
                       src="./src/img/blonde.jpeg"
-                      width="56"
-                      height="56"
+                      width="45"
+                      height="45"
                       alt="user"
                     />
                     <img
                       class="right-carousel-followers-item-user second"
                       src="./src/img/green.jpeg"
-                      width="56"
-                      height="56"
+                      width="45"
+                      height="45"
                       alt="user"
                     />
                     <img
                       class="right-carousel-followers-item-user third"
                       src="./src/img/orange.jpeg"
-                      width="56"
-                      height="56"
+                      width="45"
+                      height="45"
                       alt="user"
                     />
                   </div>
@@ -175,8 +179,8 @@
                       ./src/img/56houses@2x.png 2x
                     "
                     src="./src/img/56houses.png"
-                    width="56"
-                    height="56"
+                    width="45"
+                    height="45"
                     alt="user"
                   />
                   <div>
@@ -192,11 +196,11 @@
                   <img
                     class="right-carousel-followers-item-user"
                     src="./src/img/violet.jpeg"
-                    width="56"
-                    height="56"
+                    width="45"
+                    height="45"
                     alt="user"
                   />
-                  <div>
+                  <div class="nasty-container">
                     <h2 class="right-carousel-followers-item-users-title">
                       4K+
                     </h2>
@@ -210,7 +214,7 @@
           </div>
         </div>
       </section>
-      <section class="featured">
+      <section id="featured" class="featured">
         <div class="container">
           <div class="decor">
             <span class="line"></span>
@@ -264,7 +268,7 @@
               </li>
             </ul>
             <div class="menu-arrow-container">
-              <button class="menu-arrow-container-btn" type="button">
+              <button id="featuredBtnLeft" class="menu-arrow-container-btn" type="button">
                 <svg
                   class="menu-arrow-container-icon left-arrow"
                   width="24"
@@ -273,7 +277,7 @@
                   <use href="/src/img/sprite.svg#icon-arrow2"></use>
                 </svg>
               </button>
-              <button class="menu-arrow-container-btn" type="button">
+              <button id="featuredBtnRight" class="menu-arrow-container-btn" type="button">
                 <svg class="menu-arrow-container-icon" width="24" height="24">
                   <use href="/src/img/sprite.svg#icon-arrow2"></use>
                 </svg>
@@ -314,8 +318,8 @@
                       alt="User"
                     />
                     <div>
-                      <h3 class="featured-list-item-user">Dianne Russell</h3>
-                      <h4 class="featured-list-item-user-city">Manchester, Kentucky</h4>
+                      <h3 class="featured-list-item name">Dianne Russell</h3>
+                      <h4 class="featured-list-item city">Manchester, Kentucky</h4>
                     </div>
                   </div>
                 </div>
@@ -437,6 +441,20 @@
       </section>
       <section class="tour">
         <div class="container">
+          <img class="decor-red"
+            srcset="./src/img/red.png 1x, ./src/img/red@2x.png 2x"
+            src="./src/img/red.png"
+            width="539"
+            height="674"
+            alt="decoration"
+          />
+          <img class="decor-yellow"
+            srcset="./src/img/yellow.png 1x, ./src/img/yellow@2x.png 2x"
+            src="./src/img/yellow.png"
+            width="482"
+            height="678"
+            alt="decoration"
+          />
           <div class="tour-left">
             <div class="decor">
               <span class="line"></span>
@@ -490,10 +508,11 @@
                   <p class="city">Manchester, Kentucky</p>
                 </div>
                 <div class="tour-left-bottom-box-btn">
-                  <svg class="tour-left-bottom-icon" width="24" height="24">
+                  <a href="tel:+1234567890" class="tour-left-bottom-btn">Contact now
+                    <svg class="tour-left-bottom-icon" width="24" height="24">
                     <use href="/src/img/sprite.svg#icon-phone"></use>
                   </svg>
-                  <button class="tour-left-bottom-btn" type="button">Contact now</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -525,7 +544,7 @@
                 height="80"
                 alt="Flowers on the table"
               />
-              <img class="tour-right-images-img"
+              <img class="tour-right-images-img tour-img-mob-right"
                 srcset="./src/img/chair.jpg 1x, ./src/img/chair@2x.jpg 2x"
                 src="./src/img/chair.jpg"
                 width="96"
@@ -536,7 +555,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="container">
           <span class="line"></span>
           <p class="subtitle-section">See Our Review</p>
@@ -664,14 +683,10 @@
               </li>
             </ul>
           </div>
-          <span class="dots">
-            <button class="dots-dot"></button>
-            <button class="dots-dot"></button>
-            <button class="dots-dot"></button>
-          </span>
+          <div class="dots"></div>
         </div>
       </section>
-      <section class="more">
+      <section id="article" class="more">
         <div class="container">
           <img class="more-blue"
             srcset="./src/img/blue.png 1x, ./src/img/blue@2x.png 2x"
@@ -692,96 +707,7 @@
           <h2 class="subtitle">Find out more about selling and buying homes</h2>
           <button class="more-btn" type="button">More articles</button>
           <div class="more-container">
-            <ul class="more-container-list">
-              <li class="more-container-list-item">
-                <img class="more-container-list-item-img"
-                  srcset="./src/img/img1.jpg 1x, ./src/img/img1@2x.jpg 2x"
-                  src="./src/img/img1.jpg"
-                  width="200"
-                  height="148"
-                  alt="Orange sofa in a room"
-                />
-                <div class="more-container-list-item-box">
-                  <div class="more-container-list-item-box-top">
-                    <img
-                      class="orange"
-                      src="./src/img/orange.jpeg"
-                      width="32"
-                      height="32"
-                      alt="User"
-                    />
-                    <p class="more-name">Dianne Russell</p>
-                  </div>
-                  <h3 class="more-container-list-item-box-title">The things we need to check when we want to buy a house</h3>
-                  <div class="more-container-list-item-box-bottom">
-                    <svg class="more-container-list-item-box-bottom-icon" width="24" height="24">
-                      <use href="/src/img/sprite.svg#icon-time"></use>
-                    </svg>
-                    <p class="more-container-list-item-box-bottom-text">4 min read | 25 Apr 2021</p>
-                  </div>
-                </div>
-              </li>
-              <li class="more-container-list-item">
-                <img class="more-container-list-item-img"
-                  srcset="./src/img/img2.jpg 1x, ./src/img/img2@2x.jpg 2x"
-                  src="./src/img/img2.jpg"
-                  width="200"
-                  height="148"
-                  alt="House with big yard"
-                />
-                <div class="more-container-list-item-box">
-                  <div class="more-container-list-item-box-top">
-                    <img
-                      class="orange"
-                      src="./src/img/Courtney.jpeg"
-                      width="32"
-                      height="32"
-                      alt="User"
-                    />
-                    <p class="more-name">Courtney Henry</p>
-                  </div>
-                  <h3 class="more-container-list-item-box-title">
-                    7 Ways to distinguish the quality of the house we want to buy
-                  </h3>
-                  <div class="more-container-list-item-box-bottom">
-                    <svg class="more-container-list-item-box-bottom-icon" width="24" height="24">
-                      <use href="/src/img/sprite.svg#icon-time"></use>
-                    </svg>
-                    <p class="more-container-list-item-box-bottom-text">6 min read | 24 Apr 2021</p>
-                  </div>
-                </div>
-              </li>
-              <li class="more-container-list-item">
-                <img class="more-container-list-item-img"
-                  srcset="./src/img/img3.jpg 1x, ./src/img/img3@2x.jpg 2x"
-                  src="./src/img/img3.jpg"
-                  width="200"
-                  height="148"
-                  alt="Sunny house"
-                />
-                <div class="more-container-list-item-box">
-                  <div class="more-container-list-item-box-top">
-                    <img
-                      class="orange"
-                      src="./src/img/Darlene.jpeg"
-                      width="32"
-                      height="32"
-                      alt="User"
-                    />
-                    <p class="more-name">Darlene Robertson</p>
-                  </div>
-                  <h3 class="more-container-list-item-box-title">
-                    The best way to know the quality of the house we want to buy
-                  </h3>
-                  <div class="more-container-list-item-box-bottom">
-                    <svg class="more-container-list-item-box-bottom-icon" width="24" height="24">
-                      <use href="/src/img/sprite.svg#icon-time"></use>
-                    </svg>
-                    <p class="more-container-list-item-box-bottom-text">2 min read | 24 Apr 2021</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <ul class="more-container-list"></ul>
             <div class="more-right">
               <img class="more-right-img"
                 srcset="./src/img/bush.jpg 1x, ./src/img/bush@2x.jpg 2x"
@@ -790,7 +716,7 @@
                 height="280"
                 alt="House with a pool"
               />
-              <div>
+              <div class="more-right-container">
                 <div class="more-right-box">
                   <img
                     class="orange"
@@ -819,19 +745,22 @@
           <h2 class="subtitle sub-title">
             Subscribe For More Info and update from Hounter
           </h2>
-          <div class="input">
+          <form class="input" >
             <input
+            id="subInput"
               class="input-search"
-              type="text"
+              type="email"
+              name="email"
               placeholder="Your email here"
+              autocomplete="on"
             />
             <svg class="sub-mail" width="24" height="24">
               <use href="/src/img/sprite.svg#icon-mail"></use>
             </svg>
-            <button class="sub-btn" type="button">
+            <button class="sub-btn" type="submit">
               Subscribe Now
             </button>
-          </div>
+          </form>
           <img class="sub-orange"
             src="./src/img/orange.jpeg"
             width="36"
@@ -931,15 +860,15 @@
               <div class="form-right-container">
                 <label class="form-right-label" for="education">Education</label>
                 <div class="form-select-container">
-                  <input class="select-input" name="education" id="education" placeholder="Select One" />
+                  <input class="select-input" name="education" id="education" readonly placeholder="Select One" />
                   <svg class="form-icon" width="24" height="24">
                     <use href="/src/img/sprite.svg#icon-arrow2"></use>
                   </svg>
                   <div class="custom-select">
                     <div class="select-items">
-                      <div data-value="school">High school</div>
-                      <div data-value="bachelor">Bachelor</div>
-                      <div data-value="master">Master</div>
+                      <div class="select-item" data-value="school">High school</div>
+                      <div class="select-item" data-value="bachelor">Bachelor</div>
+                      <div class="select-item" data-value="master">Master</div>
                     </div>
                   </div>
                 </div>
@@ -950,7 +879,9 @@
                   name="message"
                   id="message"
                   placeholder="Message"
+                  maxlength="500"
                 ></textarea>
+                <p class="message-symbols">0/500</p>
               </div>
               <div class="label-container-checkbox">
                 <input
@@ -979,18 +910,22 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container">
-        <a href="./index.html">
-          <svg width="115" height="36">
-            <use href="/src/img/sprite.svg#icon-logo"></use>
-          </svg>
+    <footer class="footer">
+      <div class="footer-left">
+        <a class="logo" href="./index.html">
+          <img
+            srcset="./src/img/logo.png 1x, ./src/img/logo@2x.png 2x"
+            src="./src/img/logo.png"
+            width="115"
+            height="36"
+            alt="Logo"
+          />
         </a>
-        <p>
+        <p class="footer-left-text">
           We provide information about properties such as houses, villas and
           apartments to help people find their dream home
         </p>
-        <ul>
+        <ul class="footer-left-list">
           <li>
             <a href="">
               <svg width="32" height="32">
@@ -1014,41 +949,41 @@
           </li>
         </ul>
       </div>
-      <div>
-        <table>
-          <tr>
-            <td>Property</td>
-            <td>Article</td>
-            <td>Contact</td>
+      <div class="footer-right">
+        <table class="footer-table">
+          <tr class="footer-table-row">
+            <td class="footer-table-title hide">Property</td>
+            <td class="footer-table-title hide">Article</td>
+            <td class="footer-table-title">Contact</td>
           </tr>
-          <tr>
-            <td>House</td>
-            <td>New Article</td>
-            <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+          <tr class="footer-table-row">
+            <td class="footer-table-text hide">House</td>
+            <td class="footer-table-text hide">New Article</td>
+            <td class="footer-table-text">2464 Royal Ln. Mesa, New Jersey 45463</td>
           </tr>
-          <tr>
-            <td>Apartment</td>
-            <td>Popular Article</td>
-            <td>(671) 555-0110</td>
+          <tr class="footer-table-row">
+            <td class="footer-table-text hide">Apartment</td>
+            <td class="footer-table-text hide">Popular Article</td>
+            <td class="footer-table-text">(671) 555-0110</td>
           </tr>
-          <tr>
-            <td>Villa</td>
-            <td>Most Read</td>
-            <td>info@hounter.com</td>
+          <tr class="footer-table-row">
+            <td class="footer-table-text hide">Villa</td>
+            <td class="footer-table-text hide">Most Read</td>
+            <td class="footer-table-text">info@hounter.com</td>
           </tr>
-          <tr>
-            <td></td>
-            <td>Tips & Tricks</td>
-            <td></td>
+          <tr class="footer-table-row">
+            <td class="footer-table-text"></td>
+            <td class="footer-table-text hide">Tips & Tricks</td>
+            <td class="footer-table-text"></td>
           </tr>
         </table>
       </div>
-      <div>
-        <svg width="24" height="24">
-          <use href="/src/img/sprite.svg#icon-coockie"></use>
+      <div class="footer-cookie">
+        <svg class="icon-cookie" width="24" height="24">
+          <use href="/src/img/sprite.svg#icon-cookie"></use>
         </svg>
-        <p>We are using cookies</p>
-        <svg width="24" height="24">
+        <p class="footer-cookie-text">We are using cookies</p>
+        <svg class="icon-close" width="24" height="24">
           <use href="/src/img/sprite.svg#icon-close"></use>
         </svg>
       </div>

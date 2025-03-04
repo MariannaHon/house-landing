@@ -1,7 +1,6 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 .about .container {
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -10,41 +9,66 @@
 }
 
 .box {
-  height: 53.7rem;
+  min-height: 37rem;
+  max-height: 53.7rem;
   display: flex;
-  margin-top: 4rem;
+  align-items: start;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  min-width: 32rem;
+  width: 100%;
   max-width: 144rem;
   overflow-y: hidden;
   scroll-padding-left: 100%;
   &-list {
     display: flex;
-    gap: 3.2rem;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     &:-webkit-scrollbar {
       display: none;
     }
     &-item {
-      width: 78.4rem;
-      height: 50.5rem;
+      display: flex;
+      align-items: start;
+      min-width: 25rem;
+      min-height: 35rem;
+      width: 100%;
+      max-width: 78.4rem;
+      height: auto;
+      max-height: 50.5rem;
       scroll-snap-align: center;
       position: relative;
       &-img {
         border-radius: 0.8rem;
+        object-fit: contain;
+        height: auto;
+        max-height: 42.9rem;
       }
       &-container {
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &:-webkit-scrollbar {
+          display: none;
+        }
         position: absolute;
-        top: 26rem;
-        left: 8.6rem;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         align-items: start;
         text-align: start;
         border-radius: 1.6rem;
         padding: 3.2rem;
-        width: 61.2rem;
-        height: 24.1rem;
+        min-width: 22rem;
+        width: 90%;
+        max-width: 61.2rem;
+        max-height: 24.1rem;
+        height: auto;
         box-shadow: 0 0.8rem 3.2rem 0 rgba(12, 21, 55, 0.09);
         background: $white;
         &-title {
@@ -64,7 +88,7 @@
           display: flex;
           width: 100%;
           &-img {
-            margin-right: 1.6rem;
+            margin-right: 0.5rem;
             flex-shrink: 0;
             object-fit: cover;
             border-radius: 50%;
@@ -73,11 +97,11 @@
           }
           &-icon {
             fill: #f59e0b;
-            margin-right: 1.6rem;
+            margin-right: 0.3rem;
           }
           &-rating {
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-transform: capitalize;
             color: &black;
           }
@@ -118,11 +142,38 @@
   }
 }
 
-.dots__dot:last-child {
+.dots-dot:last-child {
   margin: 0;
 }
 
-.dots__dot--active {
+.dots-dot.active {
   background-color: $grey-dark;
   opacity: 1;
+}
+
+@media only screen and (min-width: 1200px) {
+  .box {
+    margin-top: 2.4rem;
+    &-list {
+      height: 65rem;
+      &-item {
+        flex-shrink: 0;
+        max-height: 50.5rem;
+        &-container {
+          top: 50%;
+          &-bottom {
+            &-img {
+              margin-right: 1.6rem;
+            }
+            &-icon {
+              margin-right: 1.6rem;
+            }
+            &-rating {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

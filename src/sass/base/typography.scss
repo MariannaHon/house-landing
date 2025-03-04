@@ -12,6 +12,7 @@ body {
   font-size: 3.2rem;
   text-transform: capitalize;
   color: $black;
+  margin-bottom: 1.6rem;
 }
 
 .line {
@@ -35,14 +36,14 @@ body {
 
 .name {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   line-height: 1.33333;
   color: $black;
 }
 
 .city {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.71429;
   color: $grey-primary;
 }
@@ -53,4 +54,14 @@ body {
   line-height: 1.5;
   color: $grey-dark;
   opacity: 0.75;
+}
+
+@media only screen and (min-width: 850px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .city {
+    font-size: 1.4rem;
+  }
 }

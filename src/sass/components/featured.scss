@@ -1,20 +1,21 @@
 @use '../abstracts/variables' as *;
 
-.featured {
-  padding-left: 8.4rem;
-}
-
 .featured .container {
-  flex-direction: column;
+  padding: 0 0 10rem clamp(2rem, 4.5vw, 8.3rem);
   overflow-x: hidden;
 }
+
 .menu {
   display: flex;
-  width: 1192px;
+  flex-direction: column;
+  min-width: 30rem;
+  max-width: 119.2rem;
   margin-bottom: 3.8rem;
+  align-items: center;
   &-filters {
     display: flex;
-    margin-right: auto;
+    flex-direction: column;
+    margin-bottom: 3.8rem;
     gap: 2.7rem;
     &-input {
       display: none;
@@ -81,32 +82,20 @@
   }
 }
 
-.featured .subtitle {
-  margin-left: 4rem;
-  margin-right: auto;
-}
-
-.left-arrow {
-  transform: rotate(180deg);
-}
-
-.featured-carousel {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
 .featured-list {
   display: flex;
   gap: 3.2rem;
-  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   &:-webkit-scrollbar {
     display: none;
   }
   &-item {
     flex: 0 0 auto;
     border-radius: 2px;
-    width: 37.6rem;
+    width: 22rem;
+    max-width: 37.6rem;
     scroll-snap-align: start;
     &:nth-child(1),
     &:nth-child(1n + 3) {
@@ -150,8 +139,11 @@
     }
     &-img {
       border-radius: 2.4rem;
-      width: 37.6rem;
-      height: 38.2rem;
+      height: clamp(22rem, 28vh, 37.6rem);
+      width: 100%;
+      min-width: 22rem;
+      max-width: 37.6rem;
+      max-height: 38.2rem;
     }
     &-svg {
       position: absolute;
@@ -171,14 +163,14 @@
     }
     &-title {
       font-weight: 500;
-      font-size: 2.4rem;
+      font-size: clamp(2rem, 1.7vh, 2.4rem);
       text-transform: capitalize;
       color: $black;
       margin-bottom: 0.8rem;
     }
     &-price {
       font-weight: 500;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-transform: capitalize;
       color: $grey-dark;
       margin-bottom: 2.4rem;
@@ -189,21 +181,84 @@
       max-width: 34rem;
       gap: 1.6rem;
     }
-    &-user {
-      font-weight: 500;
-      font-size: 1.8rem;
-      line-height: 1.33333;
-      color: $black;
-      &-city {
-        font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 1.71429;
-        color: $grey-primary;
+  }
+}
+
+@media only screen and (min-width: 485px) {
+  .menu {
+    &-filters {
+      flex-direction: row;
+    }
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  .featured-list {
+    gap: 3.2rem;
+    &-item {
+      width: 37.6rem;
+      &-box {
+        margin-bottom: 2.4rem;
+      }
+      &-img {
+        border-radius: 2.4rem;
+        width: 37.6rem;
+        height: 38.2rem;
+      }
+      &-price {
+        font-size: 2rem;
       }
     }
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .menu {
+    align-items: baseline;
+    flex-direction: row;
+    margin-bottom: 0;
+    &-filters {
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+    &-price {
+      margin-bottom: 2.4rem;
+    }
+    &-arrow-container {
+      margin-right: auto;
+    }
+  }
+
+  .featured .container {
+    padding: 0 0 12rem 8.3rem;
+  }
+
+  .featured .subtitle {
+    margin-left: 4rem;
+    margin-right: auto;
+  }
+}
+
+.featured .subtitle {
+  margin-right: auto;
+}
+
+.left-arrow {
+  transform: rotate(180deg);
+}
+
+.featured-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
 .orange {
   border-radius: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .featured {
+    padding-top: 0;
+  }
 }

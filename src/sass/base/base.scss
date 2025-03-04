@@ -54,11 +54,18 @@ html {
 
 .header,
 .container {
-  max-width: 1440px;
+  min-width: 32rem;
   margin: 0 auto;
   display: flex;
 }
 
 .container {
-  padding-bottom: 12rem;
+  padding-bottom: 10rem;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    padding-bottom: 12rem;
+  }
 }

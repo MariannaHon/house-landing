@@ -1,25 +1,37 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-@use "../base/utilities.scss" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/utilities.scss' as *;
 
 .hero {
-  margin: -12.6rem 0;
+  margin: max(-12.6rem) 0;
   background: radial-gradient(
-      60% 110% at top left,
+      150% 55% at top left,
       #82f7ff -45%,
-      transparent 50%
+      transparent 40%
     ),
-    radial-gradient(80% 100% at 10% 10%, #82ffd2 -30%, transparent 40%);
+    radial-gradient(120% 55% at 40% 0, #82ffd2 -40%, transparent 30%);
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    right: clamp(0.5rem, 1.7vw, 2.4rem);
+    transform: translateY(-50%);
+    fill: $white;
+  }
+  &-btn {
+    padding-right: 2rem;
+  }
 }
 
 .left {
-  margin: 12.6rem 0;
-  max-width: 72rem;
-  padding: 5.6rem 10rem 10rem 12.4rem;
+  margin: 8rem 0 4rem;
+  padding: 6rem 2rem 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &-title {
-    width: 45rem;
+    max-width: 45rem;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: capitalize;
     color: $black;
     margin-bottom: 2.4rem;
@@ -28,20 +40,26 @@
     }
   }
   &-text {
-    margin-bottom: 3.2rem;
+    max-width: 45rem;
+    margin-bottom: 5rem;
   }
   &-map {
     position: absolute;
-    top: 1.6rem;
-    left: 2.4rem;
+    top: 50%;
+    left: clamp(1rem, 1.8vw, 2.4rem);
+    transform: translateY(-50%);
     fill: #f59e0b;
   }
   &-btn-container {
     position: absolute;
-    top: 0.4rem;
-    right: 0.4rem;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     &-search-button {
       @include button(4.8rem, 15rem);
+      max-height: 4.8rem;
+      width: 30vw;
+      align-items: center;
     }
   }
 
@@ -63,55 +81,60 @@
 .right {
   display: flex;
   flex-direction: column;
-  width: 72rem;
-  margin-top: -12.6rem;
-  padding-left: 4.8rem;
+  justify-content: end;
+  width: 100%;
+  min-width: 32rem;
+  max-width: 72rem;
+  min-height: 32rem;
+  padding-bottom: 4.8rem;
+  padding-left: clamp(2rem, 4vw, 4.8rem);
   background-image: image-set(
     url(../img/hero.jpg) 1x,
     url(../img/hero@2x.jpg) 2x
   );
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0 0 0 8rem;
+  border-radius: 0 0 0 8%;
   overflow-x: hidden;
-  &-image {
-    margin: 28.2rem 0 8.4rem 3.6rem;
-  }
   &-carousel {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     display: flex;
-    max-width: 70rem;
+    max-width: 100rem;
     padding: 1rem;
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &:-webkit-scrollbar {
+      display: none;
+    }
     &-followers {
       display: flex;
-      width: 87.6rem;
+      max-width: 87.6rem;
       gap: 1.6rem;
-      &:-webkit-scrollbar {
-        display: none;
-      }
       &-item {
         display: flex;
         align-items: center;
         flex: 0 0 auto;
-        height: 10.4rem;
+        max-height: 10.4rem;
         border-radius: 3.2rem;
-        padding: 2.4rem;
+        padding: 1rem;
         box-shadow: 0 1.1rem 4.8rem 0 rgba(51, 51, 51, 0.06);
         background: $white;
         gap: 1.6rem;
         scroll-snap-align: start;
         &-set {
           position: relative;
-          height: 10.4rem;
+          height: auto;
           width: 11.2rem;
         }
         &-user {
-          top: 2.4rem;
+          width: 100%;
+          max-width: 5.6rem;
+          height: auto;
           border-radius: 100%;
-          border: 0.3rem solid $white;
+          border: 0.2rem solid $white;
           box-shadow: 0 0.9rem 3.2rem 0 rgba(89, 92, 219, 0.1);
         }
         &-users-title {
@@ -121,7 +144,6 @@
           margin-bottom: 2px;
         }
         &-subtitle {
-          width: 100%;
           font-weight: 400;
           font-size: 1.2rem;
           color: $grey-primary;
@@ -133,16 +155,22 @@
 
 .first {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
 }
 
 .second {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   left: 2.8rem;
 }
 
 .third {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   left: 5.2rem;
 }
 
@@ -150,13 +178,64 @@
   border-radius: 24px;
 }
 
-.hero-arrow {
-  position: absolute;
-  top: 1.2rem;
-  right: 2.4rem;
-  fill: $white;
+@media only screen and (min-width: 500px) {
+  .right {
+    &-carousel {
+      &-followers {
+        &-item {
+          padding: 2.4rem;
+        }
+      }
+    }
+  }
 }
 
-.hero-btn {
-  padding-right: 5.6rem;
+@media only screen and (min-width: 500px) and (max-width: 1350px) {
+  .right {
+    width: 100vw;
+    max-width: 100%;
+    max-height: 75rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero {
+    background: radial-gradient(
+        60% 110% at top left,
+        #82f7ff -45%,
+        transparent 50%
+      ),
+      radial-gradient(80% 100% at 10% 10%, #82ffd2 -30%, transparent 40%);
+  }
+  .hero .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 12.6rem auto 10rem;
+    width: 100%;
+    max-width: 72rem;
+    padding: 5.6rem 10rem 10rem 12.4rem;
+    &-title {
+      font-size: 4rem;
+    }
+    &-text {
+      margin-bottom: 3.2rem;
+    }
+    &-btn-container {
+      right: 0.4rem;
+    }
+  }
+
+  .right {
+    max-height: 72rem;
+  }
+
+  .hero-btn {
+    padding-right: 5.6rem;
+  }
 }

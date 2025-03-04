@@ -1,15 +1,16 @@
-@use "../abstracts/variables" as *;
-@use "../base/typography.scss" as *;
+@use '../abstracts/variables' as *;
+@use '../base/typography.scss' as *;
 
 .form {
   padding-top: 12rem;
   &-left {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     align-items: center;
     border-radius: 0.8rem;
     padding: 4rem;
-    width: 47.8rem;
+    max-width: 47.8rem;
     box-shadow: 0 8px 32px 0 rgba(12, 21, 55, 0.09);
     background: $white;
     background-image: image-set(
@@ -42,18 +43,20 @@
 .green-line {
   display: inline-block;
   border-radius: 4px;
-  width: 40px;
-  height: 2px;
+  width: 4rem;
+  height: 0.2rem;
   background-color: $green-primary;
 }
 
 .form-right {
   border-radius: 0.8rem;
   padding: 4rem;
-  width: 68.2rem;
-  height: 59.2rem;
+  width: 100%;
+  max-width: 68.2rem;
+  height: auto;
   box-shadow: 0 0.8rem 3.2rem 0 rgba(12, 21, 55, 0.09);
   background: $white;
+  margin: 0 auto;
   &-box {
     display: flex;
     flex-direction: column;
@@ -61,7 +64,8 @@
   }
   &-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: space-between;
     width: 100%;
   }
@@ -75,7 +79,8 @@
     border: 1px solid $grey-light;
     border-radius: 2.8rem;
     padding: 1.6rem 2.4rem;
-    width: 49.6rem;
+    width: 100%;
+    max-width: 49.6rem;
     height: 5.6rem;
     appearance: none;
     &::placeholder {
@@ -89,28 +94,78 @@
     border: 1px solid $grey-light;
     border-radius: 2.8rem;
     padding: 1.6rem 2.4rem;
-    width: 49.6rem;
+    width: 100%;
+    max-width: 49.6rem;
     height: 14.4rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .form-right {
+    max-width: 47.8rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .form .container {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .form-right {
+    max-width: 68.2rem;
+    &-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .label-container-checkbox {
+    margin-left: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .label-container-checkbox {
+    margin-left: 10.5rem;
   }
 }
 
 .textarea {
   align-items: start;
-}
-
-// ============================================
-
-.form-select-container {
   position: relative;
 }
 
+.message-symbols {
+  position: absolute;
+  bottom: 1.6rem;
+  right: 2.4rem;
+  font-size: 1.2rem;
+  text-align: right;
+  color: $grey-primary;
+}
+
+.form-select-container {
+  position: relative;
+  max-width: 49.6rem;
+  width: 100%;
+}
+
 .select-input {
+  position: relative;
+  z-index: 20;
   border: 1px solid $grey-light;
   border-radius: 2.8rem;
   padding: 1.6rem 2.4rem;
-  width: 49.6rem;
+  width: 100%;
+  max-width: 49.6rem;
   height: 5.6rem;
   appearance: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  color: $grey-primary;
+  cursor: pointer;
   &::placeholder {
     font-weight: 500;
     font-size: 1.4rem;
@@ -125,53 +180,51 @@
   position: absolute;
   top: 1.6rem;
   right: 2.4rem;
+  z-index: 20;
 }
 
 .custom-select {
-  position: relative;
-  width: 49.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 49.6rem;
   height: 5.6rem;
   display: none;
+
+  border: 1px solid $grey-light;
+  border-radius: 2.8rem;
+  padding: 6.4rem 0.8rem 1.6rem 0;
+  height: 22.4rem;
+  background-color: $white;
 }
 
-// .select-items {
-//   position: absolute;
-//   top: 100%;
-//   left: 0;
-//   right: 0;
-//   border: 1px solid $grey-light;
-//   border-radius: 2.8rem;
-//   padding: 1.6rem 2.4rem;
-//   width: 49.6rem;
-//   height: 5.6rem;
-//   &::placeholder {
-//     font-weight: 500;
-//     font-size: 1.4rem;
-//     line-height: 1.71429;
-//     color: $grey-primary;
-//   }
-//   display: none;
-//   z-index: 10;
-// }
+.select-items {
+  width: 100%;
+  max-width: 49.6rem;
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+}
 
-// .select-items div {
-//   padding: 1.2rem 2.4rem;
-//   cursor: pointer;
-//   transition: background 0.3s;
-// }
+.select-item {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  color: $black;
 
-// .select-items div:hover {
-//   background: #f0f0f0;
-// }
-
-// .select-hide {
-//   display: none;
-// }
-
-// ============================================
-
-.label-container-checkbox {
-  margin-left: 10.5rem;
+  border-radius: 2.8rem;
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+  max-width: 49.6rem;
+  height: 4rem;
+  background-color: $white;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $green-light;
+  }
 }
 
 .visually-hidden {
@@ -189,6 +242,7 @@
 
 .span-icon {
   display: inline-flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;

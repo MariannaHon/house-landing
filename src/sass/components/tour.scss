@@ -1,15 +1,21 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.tour .container {
+  padding: 0 3rem 10rem 2rem;
+}
 
 .tour {
   position: relative;
-  padding: 0 12.4rem 0 8.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &-left {
     display: flex;
-    flex-shrink: 0;
     flex-direction: column;
-    margin-right: 19.5rem;
-    width: 52.4rem;
+    min-width: 25rem;
+    max-width: 52.4rem;
+    margin-bottom: 3.2rem;
     &-subtitle {
       font-weight: 300;
       font-size: 1.6rem;
@@ -27,9 +33,8 @@
     &-list {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
+      margin-left: 25%;
       max-width: 44rem;
-      max-height: 8rem;
       gap: 1.6rem 5.3rem;
       &-item {
         display: flex;
@@ -47,9 +52,7 @@
         }
       }
     }
-    &-container {
-      margin-left: 4rem;
-    }
+
     &-container-list {
       margin-bottom: 3.2rem;
       padding-bottom: 3.2rem;
@@ -57,14 +60,14 @@
     }
     &-bottom {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      &-img {
-        margin-right: 1.6rem;
-      }
       &-container {
-        margin-right: 8.4rem;
+        margin-bottom: 3.2rem;
       }
       &-box-btn {
+        display: flex;
+        align-items: center;
         position: relative;
       }
       &-icon {
@@ -75,6 +78,7 @@
       }
       &-btn {
         @include button(4.8rem, 17.1rem);
+        width: 17.1rem;
         padding-left: 5rem;
       }
     }
@@ -83,31 +87,119 @@
 
 .tour-right {
   position: relative;
-  width: 52.8rem;
-  height: 45.9rem;
+  max-width: 52.8rem;
+  max-height: 45.9rem;
   &-video {
     border-radius: 0.8rem;
-    width: 47.8rem;
-    height: 41.6rem;
+    min-width: 25rem;
+    max-width: 47.8rem;
+    max-height: 41.6rem;
     display: block;
     object-fit: cover;
     max-width: 100%;
-    margin: 0 0 4.3rem 5rem;
+    margin: 0 0 4.3rem 0;
     &-play {
       position: absolute;
-      top: 18.4rem;
-      left: 26rem;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4.8rem;
     }
   }
   &-images {
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    gap: 0.8rem;
+    display: none;
     &-img {
+      height: auto;
+      max-height: 100%;
+      width: auto;
       border-radius: 0.8rem;
     }
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .tour .container {
+    padding: 0 12.4rem 12rem 8.4rem;
+  }
+
+  .tour {
+    &-left {
+      &-list {
+        gap: 1.6rem 5.3rem;
+      }
+      &-bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-height: 5.6rem;
+        &-container {
+          margin-right: 5rem;
+          margin-bottom: 0;
+        }
+        &-img {
+          margin-right: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .tour-right {
+    &-video {
+      height: 41.6rem;
+      margin: 0 0 4.3rem 5rem;
+      &-play {
+        width: 4.8rem;
+        top: 40%;
+        left: 60%;
+      }
+    }
+    &-images {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      gap: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .tour {
+    &-left {
+      margin-right: 12rem;
+      &-list {
+        max-height: 8rem;
+        flex-wrap: wrap;
+        margin-left: 0;
+      }
+    }
+  }
+  .tour .container {
+    padding: 0 11.5rem 12rem 7.8rem;
+    flex-direction: row;
+  }
+  .tour-img-mob-right {
+    display: none;
+  }
+
+  .tour-right {
+    height: 45.9rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .tour {
+    &-left {
+      margin-right: 19.5rem;
+      width: 52.4rem;
+    }
+  }
+
+  .tour-img-mob-right {
+    display: block;
   }
 }
 
@@ -117,12 +209,14 @@
 
 .decor-red {
   position: absolute;
+  z-index: -1;
   top: -60%;
   right: 0;
 }
 
 .decor-yellow {
   position: absolute;
+  z-index: -1;
   top: -40%;
   right: 0;
 }

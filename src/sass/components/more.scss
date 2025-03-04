@@ -1,12 +1,12 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .more .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .paragraph {
@@ -16,25 +16,47 @@
 .more {
   &-btn {
     margin: 1.6rem 0 4.8rem 0;
-    @include button(4.8rem, 14rem);
+    @include button(4.8rem, 16rem);
   }
   &-container {
     display: flex;
+    flex-direction: column;
+    min-width: 32rem;
+    width: 100%;
+    max-width: 70rem;
     gap: 3.2rem;
     &-list {
       display: flex;
-      flex-direction: column;
-      gap: 3.2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      overflow-y: hidden;
+      scroll-padding-left: 100%;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &:-webkit-scrollbar {
+        display: none;
+      }
+      gap: 3vw;
       &-item {
         display: flex;
-        width: 580px;
-        height: 148px;
+        flex-direction: column;
+        align-items: center;
+        min-width: 30rem;
+        width: 100%;
+        max-width: 58rem;
+        height: auto;
+        min-height: 14.8rem;
         gap: 3.2rem;
+        scroll-snap-align: start;
         &-img {
           border-radius: 16px;
+          width: 100%;
         }
         &-box {
           display: flex;
+          width: 95%;
+          margin: 0 auto;
           flex-direction: column;
           align-items: start;
           text-align: start;
@@ -80,9 +102,16 @@
     max-width: 58rem;
     align-items: start;
     text-align: start;
+    &-container {
+      width: 95%;
+      margin: 0 auto;
+    }
     &-img {
       border-radius: 16px;
       margin-bottom: 2.5rem;
+      max-width: 58rem;
+      width: 100%;
+      max-height: 28rem;
     }
     &-box {
       display: flex;
@@ -94,6 +123,68 @@
   &-text {
     margin-top: 0.4rem;
     margin-bottom: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .more {
+    &-container {
+      flex-direction: row;
+      overflow-y: hidden;
+      &-list {
+        height: 50.8rem;
+        flex-direction: column;
+        gap: 3.2rem;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        &-item {
+          min-width: 15rem;
+          min-height: 30rem;
+          &-box {
+            width: 100%;
+            &-top {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      &-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .more {
+    &-container {
+      min-width: 119.5rem;
+      max-height: 50.8rem;
+      &-list {
+        height: auto;
+        min-width: 58rem;
+        gap: 3.2rem;
+        &-item {
+          flex-direction: row;
+          width: 58rem;
+          min-height: 14.8rem;
+          height: 14.8rem;
+          gap: 3.2rem;
+          &-img {
+            height: 14.8rem;
+            width: 20rem;
+          }
+          &-box {
+            &-top {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

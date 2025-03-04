@@ -1,0 +1,10 @@
+import './js/header';
+import './js/hero';
+import './js/featured';
+import './js/tour';
+import './js/about';
+import './js/more';
+import './js/articles';
+import './js/subscribe';
+import './js/form';
+import './js/footer';
