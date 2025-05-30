@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 .featured .container {
-  padding: 0 0 10rem clamp(2rem, 4.5vw, 8.3rem);
+  padding: 10rem 0 10rem clamp(2rem, 4.5vw, 8.3rem);
   overflow-x: hidden;
 }
 
